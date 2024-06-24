@@ -53,7 +53,7 @@ const MediaUploader = ({setImage,image,onValueChange,type, publicId}: MediaUploa
     return (
         <div >
             <CldUploadWidget
-                uploadPreset="try_imaginify"
+                uploadPreset="work_imaginify"
                 options={{
                     multiple: false,
                     resourceType: "image"
