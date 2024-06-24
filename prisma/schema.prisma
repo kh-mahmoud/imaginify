@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Image {
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+  title              String
+  transformationType String
+  publicId           String
+  secureUrl          String
+  width              Int
+  height             Int
+  transformationUrl  String
+  config             Json
+  aspectRatio        String?
+  color              String?
+  prompt             String?
+  author             User     @relation(fields: [userId], references: [id])
+  userId             String   @db.ObjectId
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt()
+}
+
+model User {
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId       String        @unique
+  email         String        @unique
+  username      String
+  photo         String
+  firstName     String
+  lastName      String
+  planId        Int           @default(1)
+  creditBalance Int           @default(10)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt()
+  Image         Image[]
+  transaction   transaction[]
+}
+
+model transaction {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  stripeId  String
+  createdAt DateTime @default(now())
+  amount    Float
+  plan      String
+  credits   Int
+  buyer     User     @relation(fields: [userId], references: [id])
+  userId    String   @db.ObjectId
+}
