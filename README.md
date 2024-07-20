@@ -8,7 +8,7 @@ Welcome to Imaginify, web application that empowers you to transform your images
 🚀 The flexible credit-based system ensures you have the freedom to explore limitless possibilities, while our secure Stripe integration makes it easy to keep your creative journey uninterrupted. 💳 Dive into the world of Imaginify and unleash the full potential of your creativity with the most powerful AI tools at your fingertips.
 
 Unlock the magic, unleash your creativity, and transform your world with Imaginify . ✨🚀🌟
-  Feel free to join us  using the link : https://imaginify-gamma-work.vercel.app
+Feel free to join us  using the link : https://imaginify-gamma-work.vercel.app
 
 
 
