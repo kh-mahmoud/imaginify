@@ -12,6 +12,13 @@ Unlock the magic, unleash your creativity, and transform your world with Imagini
 Feel free to join us  using the link : https://imaginify-gamma-work.vercel.app
 
 
+---
 
+<div align="center">
+
+**🚀 Built with AI? Learn how**  
+[Start coding on Scrimba](https://scrimba.com/?via=u4f3b28) ·
+
+</div>
 
 
